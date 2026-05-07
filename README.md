@@ -8,7 +8,7 @@ A backend fintech solution for managing Systematic Investment Plans (SIPs), mutu
 
 - Runtime: Node.js
 - Framework: Express.js
-- Language: JavaScript / TypeScript
+- Language: JavaScript
 - Database: Relational (Normalized to 3NF)
 - API Documentation: Postman
 
