@@ -1,0 +1,405 @@
+{
+  "info": {
+    "_postman_id": "348eb67a-429f-427f-bab2-3b1eb61e0c9a",
+    "name": "fintech",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32900989"
+  },
+  "item": [
+    {
+      "name": "register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"karthik\",\r\n  \"email\": \"karthik@gmail.com\",\r\n  \"password\": \"1234\",\r\n  \"phone\": \"9876543210\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/investors/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "investors",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"karthik@gmail.com\",\r\n  \"password\": \"1234\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/investors/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "investors",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "logout",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4MTM4NzU3LCJleHAiOjE3NzgxNzQ3NTd9.4MsbQ1oVKvtB0QffIlDf73iDB6zFlAZ75XeGn5CBAVM",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/investors/logout",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "investors",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getInvestor",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4MTM4NzU3LCJleHAiOjE3NzgxNzQ3NTd9.4MsbQ1oVKvtB0QffIlDf73iDB6zFlAZ75XeGn5CBAVM",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/investors/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "investors",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "investor holdings",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4MTQ4MzQyLCJleHAiOjE3NzgxODQzNDJ9.kirULrc5SrqBX5ctk8QUHq1T238HmYgX353yWwf3kXY",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/investors/holdings/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "investors",
+            "holdings",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "networth",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4MTM4NzU3LCJleHAiOjE3NzgxNzQ3NTd9.4MsbQ1oVKvtB0QffIlDf73iDB6zFlAZ75XeGn5CBAVM",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/investors/1/networth",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "investors",
+            "1",
+            "networth"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "addFunds",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4MTM4NzU3LCJleHAiOjE3NzgxNzQ3NTd9.4MsbQ1oVKvtB0QffIlDf73iDB6zFlAZ75XeGn5CBAVM",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"fund_name\": \"Nifty 50 Index Fund\",\r\n  \"amc_name\": \"LIC Mutual Fund\",\r\n  \"current_nav\": 1205.45\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/funds",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "funds"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getFunds",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4MTQ2Njc4LCJleHAiOjE3NzgxODI2Nzh9.SzYtSbNW9_wRl5Icu_0QHz5ZfOBN34WJ5Ea-JbRcfhk",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/funds",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "funds"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "put fund nav",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4MTQ4MzQyLCJleHAiOjE3NzgxODQzNDJ9.kirULrc5SrqBX5ctk8QUHq1T238HmYgX353yWwf3kXY",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"current_nav\": 150.75\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/funds/1/nav",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "funds",
+            "1",
+            "nav"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create sip",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4MTQ4MzQyLCJleHAiOjE3NzgxODQzNDJ9.kirULrc5SrqBX5ctk8QUHq1T238HmYgX353yWwf3kXY",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"investor_id\": 1,\r\n  \"fund_id\": 1,\r\n  \"amount\": 5000,\r\n  \"execution_date\": 10\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/sips",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "sips"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "process sip",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4MTM4NzU3LCJleHAiOjE3NzgxNzQ3NTd9.4MsbQ1oVKvtB0QffIlDf73iDB6zFlAZ75XeGn5CBAVM",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/sips/1/process",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "sips",
+            "1",
+            "process"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get transactions",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4MTM4NzU3LCJleHAiOjE3NzgxNzQ3NTd9.4MsbQ1oVKvtB0QffIlDf73iDB6zFlAZ75XeGn5CBAVM",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/sips/transactions/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "sips",
+            "transactions",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get sips",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4MTQ4MzQyLCJleHAiOjE3NzgxODQzNDJ9.kirULrc5SrqBX5ctk8QUHq1T238HmYgX353yWwf3kXY",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/sips/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "sips",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
